@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #edf1f7;
+  font: 400 1rem "Mukta", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 85px;
+
+  & .header-navgation {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+
+    & .rotes-pages {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      gap: 60px;
+
+      & .logo {
+        width: 70px;
+        height: 39px;
+      }
+
+      & ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        list-style-type: none;
+        gap: 50px;
+
+        & li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+        }
+
+        & a {
+          font-size: 15px;
+          font-weight: 200;
+          line-height: normal;
+          letter-spacing: 1.5px;
+          color: #edf1f7;
+          text-decoration: none;
+        }
+      }
+    }
+
+    & .navlinks {
+      display: flex;
+      justify-content: center;
+      align-items: last baseline;
+      align-content: center;
+      width: 14%;
+      height: 80%;
+      gap: 20px;
+
+      & .box-icon {
+        color: #a9a9a9;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .box-icon {
+    transition: all ease-in-out 0.5s;
+  }
+
+  .box-icon:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 89vh;
+  grid-template-areas: "aside  main";
+
+  & aside {
+    display: flex;
+    flex-direction: column;
+    padding: 138px 80px;
+    grid-area: aside;
+    gap: 28px;
+
+    & .image-cartas {
+      width: 250px;
+      opacity: 0;
+      transform: translateY(-800px);
+    }
+
+    & .about-movie-txt {
+      & .h1-txt-aboutmovie {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        font-style: normal;
+        color: #edf1f7;
+        opacity: 0;
+        transform: translateY(-200px);
+      }
+    }
+
+    & .nav-btns {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 30px;
+
+      & button {
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        width: 270px;
+        height: 49px;
+        padding: 10px 0px;
+        color: #edf1f7;
+        border-radius: 3px;
+      }
+
+      & .btn-trailer {
+        border: none;
+        background: #c51212;
+        opacity: 0;
+        transform: translateX(-700px) skew(-10deg);
+      }
+
+      & .btn-ingresso {
+        background: transparent;
+        border: 1px solid #15ab2d;
+        opacity: 0;
+        transform: translateX(-700px) skew(-10deg);
+      }
+    }
+
+    /* animations */
+  }
+
+  & main {
+    max-height: 89vh;
+    display: flex;
+    justify-content: center;
+    grid-area: main;
+  }
+
+  & .mario-e-luigi {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
